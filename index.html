@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartUnlock Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f1f5f9;
+    }
+
+    .sidebar {
+      width: 240px;
+      background-color: #1e293b;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      padding: 20px 15px;
+    }
+
+    .sidebar h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar .section-title {
+      font-size: 11px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .sidebar li.active,
+    .sidebar li:hover {
+      color: white;
+      font-weight: bold;
+    }
+
+    .topbar {
+      margin-left: 240px;
+      background: white;
+      height: 60px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 20px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 30px;
+    }
+
+    .card-box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    .card-box h5 {
+      margin: 0;
+      font-size: 16px;
+      color: #64748b;
+    }
+
+    .card-box .value {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #334155;
+      border: none;
+      color: white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>SmartUnlock</h2>
+    <button class="theme-toggle">🌙</button>
+
+    <ul>
+      <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+
+      <div class="section-title">All Services</div>
+      <li><i class="fas fa-shopping-cart"></i> IMEI Services</li>
+      <li><i class="fas fa-history"></i> Order History</li>
+
+      <div class="section-title">Assistance</div>
+      <li><i class="fas fa-desktop"></i> Remote Services</li>
+
+      <div class="section-title">Add Funds</div>
+      <li><i class="fas fa-credit-card"></i> Add Credits</li>
+
+      <div class="section-title">Others</div>
+      <li><i class="fas fa-file-contract"></i> Terms & Conditions</li>
+      <li style="font-weight: bold;"><i class="fas fa-phone"></i> Contact Support</li>
+    </ul>
+  </div>
+
+  <div class="topbar">
+    <span class="me-3">👤 Sman ▾</span>
+    <i class="fas fa-bell"></i>
+  </div>
+
+  <div class="content">
+    <h4 class="mb-4">Dashboard</h4>
+    <p>Welcome <strong>Sman</strong>, enjoy cheap and reliable services.</p>
+
+    <div class="row">
+      <div class="col-md-6 col-lg-3">
+        <div class="card-box">
+          <h5>Available Credits</h5>
+          <div class="value">$0.0</div>
+          <a href="#">Add credits</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-box">
+          <h5>Pending Orders</h5>
+          <div class="value">0</div>
+          <a href="#">View pending orders</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-box">
+          <h5>Total Orders</h5>
+          <div class="value">0</div>
+          <a href="#">View all orders</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-box">
+          <h5>Bonus Credits</h5>
+          <div class="value">$0.0</div>
+          <a href="#">Claim Bonus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
