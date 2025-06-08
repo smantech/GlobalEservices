@@ -3,172 +3,202 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SmartUnlock Dashboard</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f1f5f9;
-    }
+  <link rel="stylesheet" href="style.css" />
+  
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>GlobalE-Services</title>  
 
-    .sidebar {
-      width: 240px;
-      background-color: #1e293b;
-      color: white;
-      height: 100vh;
-      position: fixed;
-      padding: 20px 15px;
-    }
+</head>
+<body>  
+  <!-- Navigations -->
+  <header class="nav-container">
+    <div class="logo-area">
+      <img src="GES.jpg" alt="Logo" class="logo" /> <!-- Add your logo here -->
+      <h1 class="company-name">GlobalE-Services</h1>
+    </div>
 
-    .sidebar h2 {
-      font-size: 20px;
-      font-weight: bold;
-    }
+    <div class="right-side">
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul id="nav-links">
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-shopping-cart"></i> Services</a></li>
+       <li><a href="#"><i class="fas fa-lightbulb"></i> Solution&nbsp;Blog</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="sign in.html"><i class="fas fa-sign-in-alt"></i> Sign In</a></li>
+      </ul>
+    </div>
+  </header>
 
-    .sidebar .section-title {
-      font-size: 11px;
-      color: #94a3b8;
-      text-transform: uppercase;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
+<!-- Welcome Page -->
+</head>
+<body>
+  <main class="background">
+    <div class="content">
+      <h1>Welcome to GlobalE&#8209;Services</h1>
+      <p>Enjoy seamless and affordable digital solutions.</p>
+      <div class="buttons">
+        <a href="https://t.me/globaleservicesltd2" target="_blank">Telegram</a>
+        <a href="#services">View Services</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </main>
+  <!-- Feature Services -->
+<section style="padding: 40px 20px; background-color: #f8f8f8;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px; color: #000;">Featured Services</h2>
+  <p style="text-align: center; font-size: 1.1rem; margin-bottom: 40px; color: #000;">Check out today's featured tools or services</p>
 
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  ">
 
-    .sidebar li {
-      margin-bottom: 10px;
-      color: #cbd5e1;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-    }
-
-    .sidebar li.active,
-    .sidebar li:hover {
-      color: white;
-      font-weight: bold;
-    }
-
-    .topbar {
-      margin-left: 240px;
-      background: white;
-      height: 60px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding: 0 20px;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .content {
-      margin-left: 240px;
-      padding: 30px;
-    }
-
-    .card-box {
+    <!-- Service Card -->
+    <div style="
       background: white;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-    }
-
-    .card-box h5 {
-      margin: 0;
-      font-size: 16px;
-      color: #64748b;
-    }
-
-    .card-box .value {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 5px;
-    }
-
-    .theme-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: #334155;
-      border: none;
-      color: white;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <div class="sidebar">
-    <h2>SmartUnlock</h2>
-    <button class="theme-toggle">🌙</button>
-
-    <ul>
-      <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
-
-      <div class="section-title">All Services</div>
-      <li><i class="fas fa-shopping-cart"></i> IMEI Services</li>
-      <li><i class="fas fa-history"></i> Order History</li>
-
-      <div class="section-title">Assistance</div>
-      <li><i class="fas fa-desktop"></i> Remote Services</li>
-
-      <div class="section-title">Add Funds</div>
-      <li><i class="fas fa-credit-card"></i> Add Credits</li>
-
-      <div class="section-title">Others</div>
-      <li><i class="fas fa-file-contract"></i> Terms & Conditions</li>
-      <li style="font-weight: bold;"><i class="fas fa-phone"></i> Contact Support</li>
-    </ul>
-  </div>
-
-  <div class="topbar">
-    <span class="me-3">👤 Sman ▾</span>
-    <i class="fas fa-bell"></i>
-  </div>
-
-  <div class="content">
-    <h4 class="mb-4">Dashboard</h4>
-    <p>Welcome <strong>Sman</strong>, enjoy cheap and reliable services.</p>
-
-    <div class="row">
-      <div class="col-md-6 col-lg-3">
-        <div class="card-box">
-          <h5>Available Credits</h5>
-          <div class="value">$0.0</div>
-          <a href="#">Add credits</a>
-        </div>
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 260px;
+      color: #000;
+    ">
+      <h3>iBypass Signal</h3>
+      <p><strong>$2 – $25</strong></p>
+       <div class="service-details">
+        ✅ 24/7 Customer service<br />
+        ✅ Supports iPhone 5s - X<br />
+        ✅ Crypto/MoMo/PayPal Accepted<br />
+        ✅ Instant registration
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card-box">
-          <h5>Pending Orders</h5>
-          <div class="value">0</div>
-          <a href="#">View pending orders</a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card-box">
-          <h5>Total Orders</h5>
-          <div class="value">0</div>
-          <a href="#">View all orders</a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="card-box">
-          <h5>Bonus Credits</h5>
-          <div class="value">$0.0</div>
-          <a href="#">Claim Bonus</a>
-        </div>
-      </div>
+     <a href="#"><button style="
+        background-color: #00bcd4;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+      ">Place an Order</button>
+      </a>
+      
     </div>
+
+    <!-- Ibypass Lpro -->
+    <div style="
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 260px;
+      color: #000;
+    ">
+      <h3>Ibypass Lpro</h3>
+      <p><strong>$2 – $25</strong></p>
+      <div class="service-details">
+        ✅ 24/7 Customer service<br />
+        ✅ Supports iPhone 5s - X<br />
+        ✅ Crypto/MoMo/PayPal Accepted<br />
+        ✅ Instant registration
+      </div>
+      <a href=""><button style="
+        background-color: #00bcd4;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+      ">Place an Order</button></a>
+    </div>
+
+    <!-- iRemoval -->
+    <div style="
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 260px;
+      color: #000;
+    ">
+      <h3>iRemoval Premium</h3>
+      <p><strong>$100+</strong></p>
+       <div class="service-details">
+        ✅ 24/7 Customer service<br />
+        ✅ Supports iPhone XR - 14 Pro<br />
+        ✅ Crypto/MoMo/PayPal Accepted<br />
+        ✅ 2 to 5 days registration
+      </div>
+      <a href=""><button style="
+        background-color: #00bcd4;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+      ">Place an Order</button></a>
+    </div>
+
+    <!-- m1na A12+ -->
+    <div style="
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 260px;
+      color: #000;
+    ">
+      <h3>m1na A12+ Activator</h3>
+      <p><strong>$100+</strong></p>
+      <div class="service-details">
+        ✅ 24/7 Customer service<br />
+        ✅ Supports iPhone XR - 14 Pro<br />
+        ✅ Crypto/MoMo/PayPal Accepted<br />
+        ✅ 2 to 5 days registration
+      </div>
+      <a href=""><button style="
+        background-color: #00bcd4;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+      ">Place an Order</button></a>
+      
+    </div>
+
   </div>
+  <style>
+/* Buttun Transition */
+a > button {
+  transition: background-color 0.3s ease !important;
+}
+
+a > button:hover {
+  background-color: #0097a7 !important;
+}
+</style>
+
+</section>
+<!-- created By -->
+<footer style="background: #f8f8f8; padding: 20px 0; text-align: center; font-size: 14px; color: #555;">
+  <p>
+    GlobalE-Services © 2025 &nbsp; | &nbsp; Made with passion by 
+    <a href="http://t.me/http//GoldsManFx" target="_blank" style="color: #007bff; text-decoration: none;">Sman</a>
+  </p>
+</footer>
+
+<script src="style.js"></script>
 </body>
 </html>
